@@ -43,26 +43,26 @@ z pliku Train.csv bazy:
 	* PostgreSQL – opcjonalnie dla znających fanów SQL
 ```
 
-Aby plik Train.csv został poprawnie zaimportowany do bazy danych, trzeba usunąć znaki nowej linii. Zrobi to za nas [skrypt](../../scripts/wbzyl/2unix.sh) dostępny w repozytorium prowadzącego.
+Aby plik Train.csv został zaimportowany do bazy danych, trzeba usunąć znaki nowej linii. [skrypt](../../scripts/wbzyl/2unix.sh).
 
 ```sh
-$ time ./2unix.sh Train.csv trainProper.csv
+$ time ./2unix.sh Train.csv Ttrain.csv
 
 real    11m30.359s
 user    2m47.605s
 sys     1m43.721s
 
-$ time mongoimport -d dataBase -c train --type csv --file trainProper.csv --headerline
+$ time mongoimport -d dataBase -c train --type csv --file Ttrain.csv --headerline
 connected to: 127.0.0.1
 check 9 6034196
 imported 6034195 objects
 
-real    15m50.589s
+real    13m50.319s
 user    0m0.000s
-sys     0m0.031s
+sys     0m0.029s
 ```
 
-Średnio ~6348 import'ów na sekundę
+Średnio ~6311 import'ów na sekundę
 
 ---
 
@@ -99,18 +99,18 @@ Przykładowy rekord:
 }
 ```
 
-Do tego zadania wykorzystałem własny [skrypt](../../scripts/jbelcik/1c.js), który rozbija 'spacjami' pole tags typu String na tablice String'ów.
+Do tego zadania wykorzystałem skrypt, który rozbija 'spacjami' pole tags typu String na tablice String'ów.
 
 ```sh
 $ time mongo 1c.js
 6032934 records updated
 
-real    13m3.721s
+real    11m9.311s
 user    0m0.000s
-sys     0m0.015s
+sys     0m0.017s
 ```
 
-Średnio ~7698 update'ów na sekundę
+Średnio ~7664 update'ów na sekundę
 
 Przykładowy poprawiony rekord:
 
