@@ -581,4 +581,3 @@ Wszystkie miasta leżącę na linii Lębork - Sanok.
 3
 ```
 
-![4](../../images/jbelcik/zapytanie4.jpg)
