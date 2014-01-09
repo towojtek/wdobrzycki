@@ -379,7 +379,7 @@ Dodajemy geo-indeks do kolekcji:
 ]
 ```
 
-![1](../../images/jbelcik/zapytanie1.jpg)
+
 
 #### Zapytanie 2
 
@@ -439,7 +439,7 @@ Wszystkie miasta w promieniu 0.25° od Krakowa włącznie.
 18
 ```
 
-![2](../../images/jbelcik/zapytanie2.jpg)
+
 
 #### Zapytanie 3
 
@@ -529,7 +529,7 @@ Wszystkie miasta pomiędzy Bydgoszczą, Toruniem, a Inowrocławiem.
 6
 ```
 
-![3](../../images/jbelcik/zapytanie3.jpg)
+
 
 #### Zapytanie 4
 
